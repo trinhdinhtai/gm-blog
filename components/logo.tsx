@@ -2,13 +2,14 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 
-import { Icons } from "./icons"
-
 const Logo = () => {
   return (
     <Link href="/" className="flex items-center space-x-2">
-      <Icons.logo />
-      <span className="font-bold">{siteConfig.name}</span>
+      <div className="rounded-md bg-primary px-2 py-1">
+        <span className="font-bod text-lg text-secondary">
+          {siteConfig.name}
+        </span>
+      </div>
     </Link>
   )
 }
