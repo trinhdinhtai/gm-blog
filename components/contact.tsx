@@ -59,7 +59,7 @@ const Contact = () => {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeading>Contact</SectionHeading>
 
       <p className="-mt-6 text-muted-foreground">
         Please contact me directly at{" "}
