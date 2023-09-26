@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
@@ -5,11 +6,13 @@ import { siteConfig } from "@/config/site"
 const Logo = () => {
   return (
     <Link href="/" className="flex items-center space-x-2">
-      <div className="rounded-md bg-primary px-2 py-1">
-        <span className="font-bod text-lg text-secondary">
-          {siteConfig.name}
-        </span>
-      </div>
+      <Image
+        src="/logo.png"
+        alt={siteConfig.name}
+        width={36}
+        height={36}
+        className=""
+      />
     </Link>
   )
 }
