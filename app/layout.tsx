@@ -12,6 +12,8 @@ import ToasterProvider from "@/components/providers/toaster-provider"
 import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
+import { ClerkProvider } from '@clerk/nextjs'
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -81,7 +83,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <ClerkProvider>
+ <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen font-sans antialiased",
@@ -103,5 +106,7 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
+   
   )
 }
